@@ -1,0 +1,14 @@
+﻿CRAWLING A WEBSITE
+
+
+INTRODUCTION:
+Sending HTTP queries, such as POST or GET, to a website's server and waiting for the server to respond with the required data is the first step in web scraping. Standard Python HTTP libraries, on the other hand, are challenging to use and necessitate lengthy lines of code for effectiveness, adding to an already severe problem.
+To extract photos from a website, a number of libraries will be required. In the simple web scraper lesson, data was collected and exported into a.csv file using BeautifulSoup, Selenium, and pandas. To export data that has been scraped, we will follow these prior stages (i.e. image URLs).
+Of course, compiling an image URL list alone is insufficient. The URL's content will be saved into a variable, transformed into an image object, then saved to a designated location using a number of other libraries. Pillow and requests are our newest libraries.
+pip install beautifulsoup4 selenium pandas
+Install these libraries as well:
+#install the Pillow library (used for image processing)
+pip install Pillow
+#install the requests library (used to send HTTP requests)
+pip install requests
+Data extraction process begins almost exactly the same. We assign our preferred webdriver, select the URL from which we will scrape image links and create a list to store them in. As our Chrome driver arrives at the URL, we use the variable ‘content’ to point to the page source and then “soupify” it with BeautifulSoup.
